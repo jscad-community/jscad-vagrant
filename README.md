@@ -14,13 +14,14 @@ This utility allows you to run JSCAD from a virtual linux server on your host ma
 - [Setup](#setup)
 - [Usage](#usage)
 
-### Immediate Use (no installation)
+### Setup
 
 - Install the latest VirtualBox (Virtual Machine container software) - *[virtualbox.org](https://www.virtualbox.org/wiki/Downloads)*
 - Install the latest Vagrant - *[virtualbox.org](https://www.virtualbox.org/wiki/Downloads)*
 - Fetch the JSCAD source code. This utility assumes it is in a folder called "OpenJSCAD.org". Check out the V2 branch.
 - Fetch the jscad-vagrant source code. Place it in the same folder as OpenJSCAD.org
-- Run ```
+- Run 
+```
 cd jscad-vagrant
 vagrant up
 ```
@@ -31,19 +32,12 @@ vagrant up
   - Build the code.
   - Run the JSCAD test suite
   - Build the JSCAD docs
-- To run JSCAD:
-```
-vagrant ssh # logs you into the VM as user 'vagrant'
-jscad
-```
-- Point a browser to http://127.0.0.1:8081/ on your host machine.
 
 ## Usage
 
-There are different 'flavors' of JSCAD that you can use based on your needs
-- web: online (no install) simply go to [https://openjscad.org/](https://openjscad.org/)
-- web: self hosted: can be found [here](./packages/web)
-- cli: command line interface : can be found [here](./packages/cli)
-- desktop app: pre pre alpha work in progress can be found [here](./packages/desktop)!
-- node.js: custom mix and match of packages
-  * all the packages are available [on NPM](https://www.npmjs.com/search?q=%40jscad) under the '@jscad' name
+To run JSCAD:
+```
+vagrant ssh # logs you into the VM as user 'vagrant'
+jscad # switches to the package/web directory, and launches the webserver
+```
+Point a browser to http://127.0.0.1:8081/ on your host machine.
